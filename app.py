@@ -14,7 +14,7 @@ def find_accelerating_slopes(df):
     return accel_slopes
 
 # Load the data
-@st.cache
+@st.cache_data
 def load_data():
     df = pd.read_csv('Sample_Data.csv')
     df['Timestamp'] = pd.to_datetime(df['Timestamp'], format='%d-%m-%Y %H:%M:%S')
